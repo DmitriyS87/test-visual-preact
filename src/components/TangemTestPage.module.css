@@ -1,0 +1,162 @@
+/* 
+    834
+    393 
+*/
+@custom-media --desktop (min-width: 834px);
+@custom-media --tablet (min-width: 393px);
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-width: 393px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (--tablet) {
+  }
+
+  @media (--desktop) {
+  }
+
+}
+
+.header {
+
+}
+
+.nav {
+    height: 54px;
+
+    @media (--tablet) {
+        visibility: hidden;
+    }
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.headerAd {
+    height: 54px;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+}
+
+.adContent {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.adTextBlock {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.headerAdTitle {
+    color: #fff;
+    margin: 0 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.headerAdText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    color: #d7a830;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.headerAdImage {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 54px;
+    width: 128px;
+}
+
+.adControl {
+    margin-left: 6px;
+}
+
+.AdButton {
+    background: transparent;
+    padding: 0;
+    border: 0;
+}
+
+.arrow {
+    transform: translate(2px, 4px);
+}
+
+.mainAd {
+    position: absolute;
+    right: 34px;
+    top: 559px;
+    width: 600px;
+    height: 349px;
+    background: #000;
+    background: url('/src/assets/ad_card_bg.png') center / cover no-repeat;
+    border-radius: 16px;
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+    /* 34 667 | 17 667 | 0 505 */
+}
+
+.mainAdContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.mainAdContent {
+    margin: auto;
+    margin-right: 30px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mainAdtitle {
+    color: #fff;
+    /* letter-spacing: 0.96; */
+    line-height: 1.1;
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+.mainAdOffer {
+    font-size: 40px;
+    background: -webkit-linear-gradient(45deg, #7D5317, #EDDF95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(210,152,26, 60%);
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+.mainAdHow {
+    color: #6C6C70;
+    margin-bottom: 44px;
+}
+.mainAdCode {
+    color: #D7A830;
+    text-transform: uppercase;
+}
+.mainAdLink {
+    color: #fff;
+    font-size: 16px;
+    background: rgba(255,255,255,10%);
+    padding: 4px 28px;
+    border-radius: 8px;
+    letter-spacing: .3px;
+}
