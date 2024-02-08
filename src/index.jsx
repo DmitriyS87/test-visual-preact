@@ -1,13 +1,10 @@
-import { render } from 'preact';
-import "normalize.css"
-import './style.css';
-import { TengemTestPage } from './components/TangemTestPage';
+import { render } from "preact";
+import "normalize.css";
+import "./style.css";
+import { TengemTestPage } from "./components/TangemTestPage";
 
 export function App() {
-	return (
-		<TengemTestPage />
-	);
+  return <TengemTestPage />;
 }
 
-
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById("app"));

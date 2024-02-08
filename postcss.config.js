@@ -1,11 +1,11 @@
-import postcssPresetEnv from 'postcss-preset-env';
+import postcssPresetEnv from "postcss-preset-env";
 
 export default {
-    plugins: [
-        postcssPresetEnv({
-            features: {
-                'nesting-rules': true
-            }
-        })
-    ]
-}
+  plugins: [
+    postcssPresetEnv({
+      features: {
+        "nesting-rules": true,
+      },
+    }),
+  ],
+};
