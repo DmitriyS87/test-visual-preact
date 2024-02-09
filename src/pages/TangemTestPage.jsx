@@ -13,7 +13,9 @@ export const TengemTestPage = () => {
     "tangem:main-banner-closed",
     "false",
   );
-  const { actions: { srNotify, srClearNotification } } = useContext(WCAGContext);
+  const {
+    actions: { srNotify, srClearNotification },
+  } = useContext(WCAGContext);
 
   useVisibility({ elRef: ref, onInvisible: handleRowBannerVisible });
 
@@ -27,10 +29,7 @@ export const TengemTestPage = () => {
       </header>
       <main className={styles.main}>
         {isAdCardRender && (
-          <AdCard
-            loadTrigger={isAdCardTrigger}
-            onClose={handleAdCardClose}
-          />
+          <AdCard loadTrigger={isAdCardTrigger} onClose={handleAdCardClose} />
         )}
       </main>
     </>
@@ -38,11 +37,13 @@ export const TengemTestPage = () => {
 
   function handleAdCardClose() {
     setIsCardClosed(true);
-    srClearNotification()
+    srClearNotification();
   }
 
   function handleRowBannerVisible() {
     setIsAdCardTrigger(true);
-    srNotify('Page updated with AD card banner with sales inforamtion. You can use promo code to get a discount.')
+    srNotify(
+      "Page updated with AD card banner with sales inforamtion. You can use promo code to get a discount.",
+    );
   }
 };
