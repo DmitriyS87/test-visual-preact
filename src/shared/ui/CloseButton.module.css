@@ -1,0 +1,8 @@
+.close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+.closeIcon {
+}

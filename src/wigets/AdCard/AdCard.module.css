@@ -1,0 +1,105 @@
+.card {
+  position: absolute;
+  overflow: hidden;
+  top: 342px;
+  width: 600px;
+  height: 349px;
+  background: #000;
+  background: url("/src/assets/ad_card_bg.png") 0 60% / cover no-repeat;
+  border-radius: 16px;
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+  right: -35px;
+}
+.cardContent {
+  padding: 64px 100px 0 0;
+  align-items: flex-end;
+  flex-direction: column;
+  display: flex;
+}
+.cardAction {
+  margin-right: 68px;
+}
+.cardText {
+  margin-bottom: 4px;
+  padding-right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cardLink {
+  color: #fff;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 10%);
+  padding: 12px 28px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+.cardLinkExplanation {
+  display: none;
+}
+.cardtitle {
+  color: #fff;
+  line-height: 1.1;
+  font-size: 46px;
+  margin-bottom: 10px;
+  letter-spacing: -0.4px;
+}
+.cardOffer {
+  letter-spacing: -2px;
+  font-size: 40px;
+  background: -webkit-linear-gradient(45deg, #7d5317, #eddf95);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: rgba(210, 152, 26, 60%);
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.cardHow {
+  color: #6c6c70;
+  margin-bottom: 44px;
+}
+.cardCode {
+  color: #d7a830;
+  text-transform: uppercase;
+  padding: 0 6px;
+}
+.cardClose {
+  position: absolute;
+  top: 10px;
+  right: 49px;
+}
+
+@container (inline-size >= 394px) {
+  .card {
+    top: 459px;
+    right: 10px;
+  }
+  .cardClose {
+    right: 10px;
+  }
+  .cardContent {
+    padding: 64px 22px 0;
+  }
+  .cardLink {
+    border-radius: 8px;
+  }
+  .cardAction {
+    margin: 0;
+  }
+  .cardLinkExplanation {
+    display: inline;
+  }
+}
+
+@container (inline-size >= 620px) {
+  .card {
+    right: 17px;
+  }
+}
+@container (inline-size >= 650px) {
+  .card {
+    top: 559px;
+  }
+}
