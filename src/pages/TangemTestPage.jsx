@@ -10,15 +10,13 @@ export const TengemTestPage = () => {
   const ref = useRef(null);
   const [isAdCardTrigger, setIsAdCardTrigger] = useState(false);
   const [isCardClosed, setIsCardClosed] = useLocalStorageState(
-    "tangem:main-banner-closed",
-    false,
+    "tangem:main-banner-closed"
   );
   const {
     actions: { srNotify, srClearNotification },
   } = useContext(WCAGContext);
 
   useVisibility({ elRef: ref, onInvisible: handleRowBannerVisible });
-
   const isAdCardRender = !isCardClosed && isCardClosed !== "true";
 
   return (
