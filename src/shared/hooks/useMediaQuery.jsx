@@ -24,4 +24,4 @@ const useMediaQuery = (query) => {
   }
 };
 
-export { useMediaQuery };
+export default useMediaQuery;

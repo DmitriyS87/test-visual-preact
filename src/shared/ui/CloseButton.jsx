@@ -1,8 +1,8 @@
 import styles from "./CloseButton.module.css";
 
-const CloseButton = () => {
+const CloseButton = ({ onClose = () => {} }) => {
   return (
-    <button className={styles.close}>
+    <button onClick={onClose} className={styles.close}>
       <img
         className={styles.closeIcon}
         src="/src/assets/close.svg"

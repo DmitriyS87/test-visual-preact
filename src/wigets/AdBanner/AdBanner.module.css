@@ -2,7 +2,7 @@
   height: 54px;
   background:
     -36px / contain no-repeat url("/src/assets/header_ad_max.png"),
-    #000;
+    linear-gradient(#101010, #0f0f0f);
   min-width: 394px;
   overflow: hidden;
   display: flex;
@@ -70,6 +70,12 @@
 .rowBannerClose {
   display: none;
   margin-left: 10px;
+}
+.cardCode {
+  color: #d7a830;
+  text-transform: uppercase;
+  padding: 0 6px;
+  font-weight: 500;
 }
 
 .adTextBlock {

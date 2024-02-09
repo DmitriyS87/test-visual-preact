@@ -1,16 +1,16 @@
-import { useMediaQuery } from "../../shared/hooks/useMediaQuery";
+import useMediaQuery from "../../shared/hooks/useMediaQuery";
 import CloseButton from "../../shared/ui/CloseButton";
 import styles from "./AdBanner.module.css";
 
 const ROW_ARROW_BUTTON_BREAKPOINT = 650;
 
-const AdBanner = () => {
+const AdBanner = ({ forwardRef = null }) => {
   const isRowArrowButton = useMediaQuery(
     `(min-width: ${ROW_ARROW_BUTTON_BREAKPOINT}px)`,
   );
 
   return (
-    <aside className={styles.rowBanner}>
+    <aside ref={forwardRef} className={styles.rowBanner}>
       <div className={styles.rowBannerContent}>
         <p className={styles.adTextBlock}>
           <span className={styles.rowBannerTitle}>
