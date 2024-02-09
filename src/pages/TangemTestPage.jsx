@@ -11,7 +11,7 @@ export const TengemTestPage = () => {
   const [isAdCardTrigger, setIsAdCardTrigger] = useState(false);
   const [isCardClosed, setIsCardClosed] = useLocalStorageState(
     "tangem:main-banner-closed",
-    "false",
+    false,
   );
   const {
     actions: { srNotify, srClearNotification },
