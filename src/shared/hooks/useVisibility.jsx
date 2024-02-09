@@ -4,10 +4,12 @@ const useVisibility = ({
   elRef,
   onVisible = undefined,
   onInvisible = undefined,
+  disable = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (disable) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

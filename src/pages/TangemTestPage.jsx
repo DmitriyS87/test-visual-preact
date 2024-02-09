@@ -16,8 +16,8 @@ export const TengemTestPage = () => {
     actions: { srNotify, srClearNotification },
   } = useContext(WCAGContext);
 
-  useVisibility({ elRef: ref, onInvisible: handleRowBannerVisible });
   const isAdCardRender = !isCardClosed && isCardClosed !== "true";
+  useVisibility({ elRef: ref, onInvisible: handleRowBannerVisible, disable: !isAdCardRender });
 
   return (
     <>
