@@ -14,7 +14,7 @@ const AdCard = ({ onClose = () => {}, loadTrigger = null }) => {
   }, [isAnimation, isAnimationTrigger, loadTrigger]);
 
   return (
-    <aside
+    <section
       className={cn(styles.card, {
         [styles.preanimation]: isAnimationTrigger,
         [styles.loadAnimation]: isAnimation,
@@ -24,15 +24,15 @@ const AdCard = ({ onClose = () => {}, loadTrigger = null }) => {
       <div className={styles.container}>
         <div className={styles.cardContent}>
           <div className={styles.cardText}>
-            <div className={styles.cardtitle}>Black Friday</div>
-            <div className={styles.cardOffer}>10%OFF</div>
-            <div className={styles.cardHow}>
-              Use code <span className={styles.cardCode}>10friday</span> at
+            <h6 className={styles.cardtitle}>Black Friday</h6>
+            <p className={styles.cardOffer}>10%OFF</p>
+            <p className={styles.cardHow}>
+              Use code <span aria-label="Promo code" tabindex={-1} className={styles.cardCode}>10friday</span> at
               checkout
-            </div>
+            </p>
           </div>
           <div className={styles.cardAction}>
-            <a target={"/#"} className={styles.cardLink}>
+            <a target={"#"} className={styles.cardLink} tabindex={0} aria-label="Go to online store">
               Shop now{" "}
               <span className={styles.cardLinkExplanation}>through Monday</span>
             </a>
@@ -42,7 +42,7 @@ const AdCard = ({ onClose = () => {}, loadTrigger = null }) => {
           <CloseButton onClose={handleClose} />
         </div>
       </div>
-    </aside>
+    </section>
   );
 
   function handleClose() {

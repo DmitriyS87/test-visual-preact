@@ -3,21 +3,21 @@ import AdBanner from "../wigets/AdBanner/AdBanner";
 import useLocalStorageState from "../shared/hooks/useLocalStorage";
 import AdCard from "../wigets/AdCard/AdCard";
 import useVisibility from "../shared/hooks/useVisibility";
-import { useCallback, useRef, useState } from "preact/hooks";
+import { useContext, useRef, useState } from "preact/hooks";
+import { WCAGContext } from "../features/WCAG/context/Provider";
 
 export const TengemTestPage = () => {
+  const ref = useRef(null);
+  const [isAdCardTrigger, setIsAdCardTrigger] = useState(false);
   const [isCardClosed, setIsCardClosed] = useLocalStorageState(
     "tangem:main-banner-closed",
     "false",
   );
-  const [isAdCardTrigger, setIsAdCardTrigger] = useState(false);
-  let ref = useRef(null);
+  const { actions: { srNotify, srClearNotification } } = useContext(WCAGContext);
 
-  const handleRowBannerVisible = useCallback(() => {
-    setIsAdCardTrigger(true);
-  }, []);
   useVisibility({ elRef: ref, onInvisible: handleRowBannerVisible });
-  const isAdCardRender = !isCardClosed && isCardClosed !== "true" ;
+
+  const isAdCardRender = !isCardClosed && isCardClosed !== "true";
 
   return (
     <>
@@ -29,10 +29,20 @@ export const TengemTestPage = () => {
         {isAdCardRender && (
           <AdCard
             loadTrigger={isAdCardTrigger}
-            onClose={() => setIsCardClosed(true)}
+            onClose={handleAdCardClose}
           />
         )}
       </main>
     </>
   );
+
+  function handleAdCardClose() {
+    setIsCardClosed(true);
+    srClearNotification()
+  }
+
+  function handleRowBannerVisible() {
+    setIsAdCardTrigger(true);
+    srNotify('Page updated with AD card banner with sales inforamtion. You can use promo code to get a discount.')
+  }
 };

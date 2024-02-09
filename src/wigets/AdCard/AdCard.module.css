@@ -47,13 +47,18 @@
   display: none;
 }
 .cardtitle {
+  margin: 0;
+  padding: 0;
   color: #fff;
   line-height: 1.1;
   font-size: 46px;
+  font-weight: 400;
   margin-bottom: 10px;
   letter-spacing: -0.4px;
 }
 .cardOffer {
+  margin: 0;
+  padding: 0;
   letter-spacing: -2px;
   font-size: 40px;
   background: -webkit-linear-gradient(45deg, #7d5317, #eddf95);
@@ -64,6 +69,8 @@
   font-weight: bold;
 }
 .cardHow {
+  margin: 0;
+  padding: 0;
   color: #6c6c70;
   margin-bottom: 44px;
 }

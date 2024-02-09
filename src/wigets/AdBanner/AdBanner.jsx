@@ -10,7 +10,7 @@ const AdBanner = ({ forwardRef = null }) => {
   );
 
   return (
-    <aside ref={forwardRef} className={styles.rowBanner}>
+    <section ref={forwardRef} className={styles.rowBanner} aria-label="Advertising banner. You can use promo code to get a discount.">
       <div className={styles.rowBannerContent}>
         <p className={styles.adTextBlock}>
           <span className={styles.rowBannerTitle}>
@@ -34,18 +34,18 @@ const AdBanner = ({ forwardRef = null }) => {
             />
           </span>
           <span className={styles.rowBannerOffer}>
-            Use code <span className={styles.cardCode}>10friday</span>{" "}
+            Use code <span className={styles.cardCode} aria-label="Promo code">10friday</span>{" "}
             <span className={styles.offerAdditionalInfo}>at checkout</span>
           </span>
         </p>
       </div>
       <div className={styles.rowBannerAction}>
         {isRowArrowButton ? (
-          <a target={"/#"} className={styles.shopNow}>
+          <a target={"#"} className={styles.shopNow} tabindex={0} aria-label="Go to online store">
             <span className={styles.shopNowText}>Shop now</span>
           </a>
         ) : (
-          <a className={styles.AdButton}>
+          <a target={"#"} className={styles.AdButton} tabindex={0} aria-label="Go to online store">
             <img
               className={styles.arrow}
               src="/src/assets/ad-arrow.svg"
@@ -57,7 +57,7 @@ const AdBanner = ({ forwardRef = null }) => {
           <CloseButton />
         </div>
       </div>
-    </aside>
+    </section>
   );
 };
 
